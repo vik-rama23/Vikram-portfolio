@@ -94,7 +94,7 @@ export default function Navbar() {
           </ul>
 
           {/* Theme Toggle (desktop) */}
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
             aria-label="Toggle theme"
@@ -104,7 +104,7 @@ export default function Navbar() {
             ) : (
               <Moon className="w-5 h-5 text-gray-700" />
             )}
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Toggle */}
