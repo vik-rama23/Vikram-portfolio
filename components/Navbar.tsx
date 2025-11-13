@@ -58,12 +58,12 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             onClick={() => setMenuOpen((s) => !s)}
             className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition"
