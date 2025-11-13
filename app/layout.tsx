@@ -5,15 +5,15 @@ import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Vikram Kumar | Frontend Developer",
-  description:
-    "Portfolio of Vikram Kumar – Frontend Developer with more than 9 years of experience in React, Next.js, and modern UI design.",
+  description: "Frontend Developer | React, Next.js, TypeScript — Portfolio",
+  keywords: ["Vikram Kumar", "Frontend", "React", "Next.js", "Portfolio"],
+  openGraph: {
+    title: "Vikram Kumar | Frontend Developer",
+    description: "Portfolio showcasing React and frontend work.",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-inter">

@@ -3,32 +3,31 @@ import ProjectCard from "@/components/ProjectCard";
 export default function Projects() {
   const projects = [
     {
-      title: "Competitive Edge (EY-CT)",
+      title: "Competitive Edge (EY)",
       description:
-        "A data-driven web application developed for EY to visualize business analytics. Built with React, TypeScript, and Highcharts for real-time analytics.",
-      tech: ["React", "TypeScript", "Redux", "Highcharts", "HTML5", "SASS"],
+        "A data-driven strategic intelligence and M&A analytics platform. Helps enterprises analyze markets, competitors, and trends using AI-powered insights and interactive dashboards. Built high-performance charts, improved rendering, and created reusable UI components.",
+      tech: ["React", "TypeScript", "Redux", "Highcharts", "Jest", "RTL"],
       image: "/projects/ey-ct.png",
-      duration: "4 years",
+      duration: "",
       github: "",
       live: "",
     },
     {
       title: "BNSF NPM Packages",
-      description:
-        "Developed reusable UI components as internal NPM packages, ensuring design consistency across multiple enterprise web applications.",
+      description: "Developed and maintained reusable NPM packages for the BNSF Railway frontend team. Built UI components, fixed bugs, delivered demos, and maintained 80%+ test coverage using Jest and RTL to ensure code quality and reliability.",
       tech: ["React", "SASS", "NPM", "Redux"],
       image: "/projects/npm-package.png",
-      duration: "0.5 years",
+      duration: "",
       github: "",
       live: "",
     },
     {
       title: "Toyota GTS Web App",
       description:
-        "Enterprise-grade web application for Toyota Material Handling, developed using React, Redux, and Kendo UI. Improved UI consistency and responsiveness.",
+      "Worked on Toyota North America’s forklift telematics platform at Infosys. Built real-time data visualizations by consuming API data from SAP and multi-database architecture (Historical, Cosmos, App DB). Designed and developed complex dashboards using React and Power BI, including line, bar, donut, and mixed charts. Led the frontend team, drove best practices, conducted KT sessions, and provided continuous technical guidance to ensure smooth delivery.",
       tech: ["React", "Redux", "Kendo UI", "SASS"],
       image: "/projects/toyota-gts.png",
-      duration: "2.5 years",
+      duration: "",
       github: "",
       live: "",
     },
@@ -38,20 +37,42 @@ export default function Projects() {
         "Developed analytics dashboards for wind turbine performance visualization using React, React Native, and Highcharts.",
       tech: ["React", "React Native", "Redux Persist", "Highcharts"],
       image: "/projects/senvion.png",
-      duration: "0.5 years",
+      duration: "",
       github: "",
       live: "",
     },
     {
-      title: "Aditya Birla Travel & Locator App",
+      title: "Aditya Birla – Travel & Locator Mobile App",
       description:
-        "Built a hybrid mobile app using Angular and Ionic for travel tracking and push notifications with AWS integration.",
-      tech: ["Angular", "Ionic", "Cordova", "AWS"],
+        "Cross-platform travel and employee locator app with secure encryption, real-time geolocation, Google Maps, weather integration, and push notifications. Built end-to-end using Angular 2, Ionic, and Cordova.",
+      tech: ["Angular 2", "Ionic 2", "Cordova", "HTML5", "CSS", "CryptoJS", "AWS Notifications"],
       image: "/projects/aditya-birla.png",
-      duration: "1.8 years",
-      github: "",
-      live: "",
+      duration: "",
     },
+    {
+      title: "LimeRoad – E-commerce for Jio Feature Phones",
+      description:
+        "Developed a lightweight e-commerce application optimized for Jio feature phones. Responsible for requirements, planning, UI development, and full SDLC execution.",
+      tech: ["ReactJS", "Redux", "HTML", "CSS"],
+      image: "/projects/limeroad.png",
+      duration: "",
+    },
+    {
+      title: "Zopper – E-commerce for Samsung Tizen",
+      description:
+        "Built an e-commerce mobile application for Samsung Tizen devices using AngularJS and Ionic. Delivered UI components, performance improvements, documentation, and deployment to the Tizen App Store.",
+      tech: ["AngularJS", "Ionic", "Cordova", "HTML", "CSS", "jQuery"],
+      image: "/projects/zopper.png",
+      duration: "",
+    },
+    {
+      title: "NASSCOM (nipp.tech) – Web Application",
+      description:
+        "Designed and developed the responsive frontend for NASSCOM’s innovation platform. Improved usability, ensured cross-device responsiveness, and coordinated with backend and UX teams for a seamless experience.",
+      tech: ["JavaScript", "HTML", "CSS"],
+      image: "/projects/nasscom.png",
+      duration: "",
+    }
   ];
 
   return (

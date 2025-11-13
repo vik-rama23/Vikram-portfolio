@@ -1,53 +1,24 @@
-import MotionWrapper from "@/components/MotionWrapper";
+import PageWrapper from "@/components/MotionWrapper";
 
 export default function Skills() {
-    const skills = {
-        "Web Technologies": [
-            "React.js",
-            "Next.js",
-            "React Native",
-            "Angular",
-            "HTML5",
-            "CSS3",
-            "SASS",
-            "Bootstrap",
-            "Node.js",
-            "Jest",
-            "RTL",
-            "Highcharts",
-        ],
-        "Tools & IDEs": [
-            "VS Code",
-            "GitLab",
-            "JIRA",
-            "Eclipse",
-            "Android Studio",
-            "Xcode",
-        ],
-        "Areas of Interest": ["IoT", "Python", "SQL", "Azure DevOps", "Power BI"],
-    };
+  const skills = [
+    "React", "Next.js", "TypeScript", "Redux", "React Native", "HTML5",
+    "CSS3", "SASS", "Tailwind", "Highcharts", "Jest", "RTL",
+  ];
 
-    return (
-        <MotionWrapper>
-            <section className="py-16">
-                <h2 className="text-3xl font-bold mb-8 text-gray-800">
-                    Skills & Competencies
-                </h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                    {Object.entries(skills).map(([category, items]) => (
-                        <div key={category} className="border rounded-lg p-6 shadow-sm">
-                            <h3 className="text-xl font-semibold text-blue-600 mb-4">
-                                {category}
-                            </h3>
-                            <ul className="list-disc ml-5 text-gray-700">
-                                {items.map((item) => (
-                                    <li key={item}>{item}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        </MotionWrapper>
-    );
+  return (
+    <PageWrapper>
+      <section className="py-12">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">Skills</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {skills.map((s) => (
+            <div key={s} className="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm flex items-center justify-between">
+              <span className="text-gray-800 dark:text-gray-100">{s}</span>
+              <div className="h-2 w-24 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </PageWrapper>
+  );
 }

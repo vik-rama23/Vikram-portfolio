@@ -1,76 +1,126 @@
-import MotionWrapper from "@/components/MotionWrapper";
+import PageWrapper from "@/components/MotionWrapper";
 
 export default function Experience() {
     const experiences = [
         {
-            company: "Larsen & Toubro Infotech",
-            role: "Senior Software Developer",
+            company: "LTIMindtree (formerly Larsen & Toubro Infotech)",
+            role: "Senior Software Developer / Team Lead",
             duration: "Nov 2021 – Present",
-            details: [
-                "Leading a team of frontend developers to deliver data-driven applications.",
-                "Developed complex charts using Highcharts and TypeScript.",
-                "Implemented Jest & RTL unit tests with 85% code coverage.",
-                "Delivered optimized, scalable, and responsive web solutions.",
+            bullets: [
+                "Leading the LTIMindtree team for EY Competitive Edge, a strategic intelligence & analytics platform.",
+                "Planning UI tasks, assigning work, and mentoring junior developers.",
+                "Built interactive dashboards using React, TypeScript, Redux and Highcharts.",
+                "Improved UI performance, accessibility and component architecture.",
+                "Created reusable UI components shared across modules.",
+                "Implemented unit tests using Jest & React Testing Library.",
+                "Collaborated with backend and UX teams for seamless delivery."
             ],
         },
         {
             company: "Tech Mahindra",
-            role: "Senior Software Developer",
+            role: "Senior Software Developer (BNSF Railway)",
             duration: "May 2021 – Oct 2021",
-            details: [
-                "Developed reusable UI components and NPM packages.",
-                "Guided team members on React, Redux, and SASS best practices.",
+            bullets: [
+                "Developed reusable NPM packages for BNSF Railway’s frontend team.",
+                "Built shared UI components and utilities used across multiple applications.",
+                "Handled bug fixes, enhancements and provided demos to FE developers.",
+                "Maintained 80%+ test coverage with Jest and React Testing Library.",
+                "Conducted KT sessions and created usage documentation."
             ],
         },
         {
-            company: "Infosys Ltd.",
-            role: "Associate Consultant",
+            company: "Infosys",
+            role: "Software Associate consultant / Frontend Lead (Toyota North America)",
             duration: "Dec 2018 – Apr 2021",
-            details: [
-                "Developed UIs for Toyota and Raymond using React, Redux, and Kendo UI.",
-                "Collaborated with PO and dev teams to align frontend deliverables.",
+            bullets: [
+                "Worked as the Frontend Lead for Toyota’s Forklift Telematics platform.",
+                "Coordinated UI efforts between offshore and onsite teams.",
+                "Visualized telematics data from SAP and multiple databases (Historical, Cosmos, App DB).",
+                "Built dashboards using React and Power BI including line, bar, donut and mixed charts.",
+                "Guided junior developers through KT sessions, code reviews and architecture decisions.",
+                "Improved UI stability, real-time data handling and overall performance."
             ],
         },
         {
-            company: "Senvion India Pvt Ltd.",
-            role: "Frontend Engineer - Analytics",
-            duration: "Jun 2018 – Dec 2018",
-            details: [
-                "Built offline-capable apps using React Native and Redux.",
-                "Improved performance and optimized data handling.",
+            company: "Senvion India Pvt. Ltd.",
+            role: "Frontend Engineer",
+            duration: "June 2018 – Dec 2018",
+            bullets: [
+                "Built dashboards for real-time wind turbine monitoring.",
+                "Developed analytical UI screens using Angular and JavaScript.",
+                "Worked with sensor and performance data visualization."
             ],
         },
         {
-            company: "Divum Corporate Services Pvt Ltd.",
-            role: "Frontend Developer",
-            duration: "Sep 2016 – May 2018",
-            details: [
-                "Developed mobile apps using Angular, Ionic, and Cordova.",
-                "Implemented geolocation, encryption, and push notifications.",
+            company: "Divum Corporate Services Pvt. Ltd.",
+            role: "Application Developer",
+            duration: "Sept 2016 – May 2018",
+            bullets: [
+                "Developed Aditya Birla Travel & Locator App using Angular/Ionic with maps, encryption and notifications.",
+                "Built LimeRoad e-commerce UI for Jio feature phones using React and Redux.",
+                "Created Zopper e-commerce mobile app for Samsung Tizen devices.",
+                "Developed responsive frontend for NASSCOM’s nipp.tech innovation platform."
             ],
         },
     ];
 
+    const awards = [
+        {
+            title: "Spot Award – LTIMindtree",
+            desc: "Awarded for delivering high-quality UI enhancements under tight timelines."
+        },
+        {
+            title: "Super crew award – LTIMindtree",
+            desc: "Awarded twice for outstanding UI delivery, quality improvements, and consistently meeting challenging deadlines."
+        },
+        {
+            title: "Client Appreciation – LTIMindtree",
+            desc: "Recognized for consistent productivity, ownership and seamless delivery."
+        },
+        {
+            title: "Insta award – Infosys",
+            desc: "Recognized twice for leading the FE team and improving Toyota telematics dashboards."
+        }
+    ];
+
     return (
-        <MotionWrapper>
-            <section className="py-16">
-                <h2 className="text-3xl font-bold mb-6 text-gray-800">Experience</h2>
-                <div className="space-y-8">
-                    {experiences.map((exp) => (
-                        <div key={exp.company} className="border-l-4 border-blue-600 pl-4">
-                            <h3 className="text-xl font-semibold text-blue-600">{exp.role}</h3>
-                            <p className="text-gray-800">
-                                {exp.company} | {exp.duration}
-                            </p>
-                            <ul className="list-disc ml-5 text-gray-700 mt-2">
-                                {exp.details.map((d) => (
-                                    <li key={d}>{d}</li>
+        <PageWrapper>
+            <section className="py-12">
+                <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">Experience</h2>
+
+                <div className="space-y-6">
+                    {experiences.map((e) => (
+                        <div key={e.company} className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm">
+                            <div className="flex justify-between items-start">
+                                <div>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{e.role}</h3>
+                                    <div className="text-sm text-gray-600 dark:text-gray-300">
+                                        {e.company} • {e.duration}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul className="mt-3 list-disc ml-5 text-gray-700 dark:text-gray-300">
+                                {e.bullets.map((b) => (
+                                    <li key={b}>{b}</li>
                                 ))}
                             </ul>
                         </div>
                     ))}
                 </div>
+
+                {/* Awards Section */}
+                <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 dark:text-gray-100">Awards & Recognition</h2>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                    {awards.map((a) => (
+                        <div key={a.title} className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm">
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{a.title}</h3>
+                            <p className="text-sm mt-2 text-gray-700 dark:text-gray-300">{a.desc}</p>
+                        </div>
+                    ))}
+                </div>
             </section>
-        </MotionWrapper>
+        </PageWrapper>
     );
 }
