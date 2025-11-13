@@ -24,7 +24,7 @@ export default function Home() {
                 View Work
               </Link>
 
-              <a href="/Vikram_Kumar_Resume.pdf" download className="inline-flex items-center gap-2 border border-gray-300 dark:border-gray-700 px-5 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+              <a href="/Vikramkumar-resume.pdf" download className="inline-flex items-center gap-2 border border-gray-300 dark:border-gray-700 px-5 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition">
                 Download Resume
               </a>
             </div>

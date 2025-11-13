@@ -49,7 +49,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="/Vikram_Kumar_Resume.pdf"
+                href="/Vikramkumar-resume.pdf"
                 download="Vikram_Kumar_Resume.pdf"
                 className="bg-blue-600 text-white px-4 py-1.5 rounded-md hover:bg-blue-700 text-sm transition"
               >
