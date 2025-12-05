@@ -3,6 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
 
+export const metadata = {
+  title: "Vikram Kumar — Frontend Developer",
+  description:
+    "I build modern, high-performance web experiences with React, Next.js and TypeScript. Portfolio of Vikram Kumar.",
+  openGraph: {
+    title: "Vikram Kumar — Frontend Developer",
+    description:
+      "I build modern, high-performance web experiences with React, Next.js and TypeScript.",
+    images: ["/opengraph-image.svg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vikram Kumar — Frontend Developer",
+    description:
+      "I build modern, high-performance web experiences with React, Next.js and TypeScript.",
+    images: ["/opengraph-image.svg"],
+  },
+};
 
 export default function Home() {
   return (
@@ -16,8 +35,7 @@ export default function Home() {
               I build modern, high-performance web experiences.
             </h1>
             <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg">
-              I’m Vikram Kumar — I’m a Frontend Engineer with more than 9 years of experience creating responsive web applications. I work mainly with React, Next.js, and TypeScript, and I care about building fast, accessible, and clean interfaces.
-            </p>
+              I’m Vikram Kumar — I’m a Frontend Engineer with over 9 years of experience building responsive and user-friendly web applications. I mainly work with React, Next.js, and TypeScript, and I enjoy creating clean, fast, and accessible interfaces. I’ve led UI work on several projects, improved design systems, and helped teams build scalable front-end solutions. I love turning complex problems into simple experiences and working closely with designers and backend teams to bring ideas to life. I’m always learning and keeping up with new frontend trends to improve the way I build products.</p>
 
             <div className="mt-6 flex gap-4">
               <Link href="/projects" className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">

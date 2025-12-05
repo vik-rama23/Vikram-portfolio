@@ -1,9 +1,29 @@
 import PageWrapper from "@/components/MotionWrapper";
 
+export const metadata = {
+  title: "Skills — Vikram Kumar | Frontend Developer",
+  description:
+    "Skills: React, Next.js, TypeScript, Tailwind and more — Vikram Kumar's frontend skillset.",
+  openGraph: {
+    title: "Skills — Vikram Kumar",
+    description:
+      "Frontend skills and technologies — React, Next.js, TypeScript, Tailwind.",
+    images: ["/opengraph-image.svg"],
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skills — Vikram Kumar",
+    description:
+      "Frontend skills and technologies — React, Next.js, TypeScript, Tailwind.",
+    images: ["/opengraph-image.svg"],
+  },
+};
+
 export default function Skills() {
   const skills = [
-    "React", "Next.js", "TypeScript", "Redux", "React Native", "HTML5",
-    "CSS3", "SASS", "Tailwind", "Highcharts", "Jest", "RTL",
+    "React", "Next.js", "Redux", "React Native", "HTML5",
+    "CSS3", "SASS", "Tailwind", "Highcharts", "Jest", "RTL", "Angular", "JavaScript", "TypeScript", "Python", "Microsoft Power Pages"
   ];
 
   return (
