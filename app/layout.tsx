@@ -1,61 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-// NOTE: Replace the metadataBase URL with your production domain (e.g. https://vikramkumar.dev)
-export const metadataBase = new URL("https://example.com");
-
+const siteUrl = "https://vikramkumar.info";
 export const metadata: Metadata = {
-  title: "Vikram Kumar | Frontend Developer",
-  description: "Frontend Developer | React, Next.js, TypeScript — Portfolio",
-  keywords: ["Vikram Kumar", "Frontend", "React", "Next.js", "Portfolio"],
-  openGraph: {
-    title: "Vikram Kumar | Frontend Developer",
-    description: "Portfolio showcasing React and frontend work.",
-    url: metadataBase.href,
-    siteName: "Vikram Kumar",
-    images: ["/opengraph-image.svg"],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vikram Kumar | Frontend Developer",
-    description: "Frontend Developer | React, Next.js, TypeScript — Portfolio",
-    images: ["/opengraph-image.svg"],
-  },
-  alternates: {
-    canonical: metadataBase.href,
-  },
+  metadataBase: new URL(siteUrl),
+  title: { default: "Vikram Kumar | Specialist - Software Engineering", template: "%s | Vikram Kumar" },
+  description: "Vikram Kumar is a Specialist - Software Engineering with 10+ years of experience in frontend engineering, React, TypeScript, React Native and data visualization.",
+  keywords: ["Vikram Kumar", "Frontend Engineering", "React", "TypeScript", "React Native", "Frontend Lead", "Highcharts"],
+  openGraph: { title: "Vikram Kumar | Specialist - Software Engineering", description: "10+ years building responsive web and mobile applications, leading frontend delivery and engineering data-rich experiences.", url: siteUrl, siteName: "Vikram Kumar", images: ["/opengraph-image.svg"], type: "website" },
+  twitter: { card: "summary_large_image", title: "Vikram Kumar | Specialist - Software Engineering", description: "Frontend engineering, technical leadership and data visualization.", images: ["/opengraph-image.svg"] },
+  alternates: { canonical: siteUrl },
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const ld = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Vikram Kumar",
-    url: metadataBase.href,
-    sameAs: [
-      "https://www.linkedin.com/in/vikramkumarverma/",
-      "https://github.com/vik-rama23",
-    ],
-    jobTitle: "Frontend Developer",
-  } as const;
-
-  return (
-    <html lang="en">
-      <body className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-inter">
-        {/* Structured data (JSON-LD) for better search engine understanding */}
-        <script
-          type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
-        />
-
-        <Navbar />
-        <main className="min-h-screen max-w-6xl mx-auto px-4 py-8">{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+  const person = { "@context": "https://schema.org", "@type": "Person", name: "Vikram Kumar", url: siteUrl, jobTitle: "Specialist - Software Engineering", address: { "@type": "PostalAddress", addressLocality: "Pune", addressCountry: "IN" }, sameAs: ["https://www.linkedin.com/in/vikramkumarverma/", "https://github.com/vik-rama23"], knowsAbout: ["React.js", "TypeScript", "Redux", "React Native", "Highcharts", "Frontend Architecture", "Python", "FastAPI"] };
+  return <html lang="en"><body className="site-shell"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} /><Navbar /><main className="page-main">{children}</main><Footer /></body></html>;
 }
