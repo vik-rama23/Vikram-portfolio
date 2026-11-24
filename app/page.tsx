@@ -10,7 +10,7 @@ const skills = [
 ];
 
 const experience = [
-  { period: "Jan 2026 — Present", role: "Specialist – Software Engineering", company: "LTIMindtree", details: "Frontend technical leadership and end-to-end delivery across enterprise web experiences. Working across React, TypeScript, data visualisation and emerging GenAI-enabled capabilities." },
+  { period: "October 2021 — Present", role: "Specialist – Software Engineering", company: "LTIMindtree", details: "Frontend technical leadership and end-to-end delivery across enterprise web experiences. Working across React, TypeScript, data visualisation and emerging GenAI-enabled capabilities." },
   { period: "Nov 2021 — Dec 2025", role: "Senior Software Developer", company: "LTIMindtree", details: "Built and enhanced enterprise applications for EY Strategy & Transactions, including reusable frontend experiences, data-rich dashboards and complex interactive interfaces." },
   { period: "May 2021 — Oct 2021", role: "Senior Software Developer", company: "Tech Mahindra", details: "Developed React UI components and reusable NPM packages for the BNSF North America application ecosystem." },
   { period: "Dec 2018 — Apr 2021", role: "Associate Consultant → Senior Associate Consultant", company: "Infosys", details: "Contributed to enterprise telematics applications for Toyota North America, building frontend features and collaborating across engineering and product teams." },
