@@ -124,17 +124,20 @@ export default function Home() {
 
       <section id="projects" className="section projects-section">
         <div className="container">
-          <div className="section-heading centered">
-            <p className="eyebrow">Selected work</p>
-            <h2>Projects &amp; <span>Contributions</span></h2>
-            <p>A career-spanning selection of products and platforms, presented in the order of my professional journey.</p>
+          <div className="projects-intro">
+            <div className="section-heading">
+              <p className="eyebrow">Selected work · 2016 — Present</p>
+              <h2>Projects &amp; <span>Contributions</span></h2>
+              <p>A career-spanning selection of products and platforms, organized by the companies where I built them.</p>
+            </div>
+            <div className="projects-summary"><strong>5</strong><span>companies</span><i /><strong>8</strong><span>projects</span><i /><strong>10+</strong><span>years</span></div>
           </div>
           <div className="project-company-list">
             {projectGroups.map((group, groupIndex) => (
               <section className="project-company" key={group.company}>
                 <div className="project-company-heading">
-                  <div><span className="project-index">{String(groupIndex + 1).padStart(2, "0")}</span><h3>{group.company}</h3></div>
-                  <span className="project-period">{group.period}</span>
+                  <div className="project-company-title"><span className="project-index">{String(groupIndex + 1).padStart(2, "0")}</span><div><h3>{group.company}</h3><span className="project-period">{group.period}</span></div></div>
+                  <span className="project-count">{group.projects.length} {group.projects.length === 1 ? "project" : "projects"}</span>
                 </div>
                 <div className="project-grid">
                   {group.projects.map((project) => (
@@ -143,7 +146,7 @@ export default function Home() {
                       <h4>{project.name}</h4>
                       <p className="project-description">{project.description}</p>
                       <div className="project-role"><strong>Contribution</strong><span>{project.role}</span></div>
-                      <div className="project-stack"><strong>Technology</strong><span>{project.stack}</span></div>
+                      <div className="project-stack"><strong>Technology</strong><div className="project-tags">{project.stack.split(" · ").map((technology) => <span className="project-tag" key={technology}>{technology}</span>)}</div></div>
                     </article>
                   ))}
                 </div>
