@@ -1,96 +1,11 @@
-import ProjectCard from "@/components/ProjectCard";
-
-export default function Projects() {
-  const projects = [
-    {
-      title: "Competitive Edge (EY)",
-      description:
-        "A data-driven strategic intelligence and M&A analytics platform. Helps enterprises analyze markets, competitors, and trends using AI-powered insights and interactive dashboards. Built high-performance charts, improved rendering, and created reusable UI components.",
-      tech: ["React", "TypeScript", "Redux", "Highcharts", "Jest", "RTL"],
-      image: "/projects/ey-ct.png",
-      duration: "",
-      github: "",
-      live: "",
-    },
-    {
-      title: "BNSF NPM Packages",
-      description: "Developed and maintained reusable NPM packages for the BNSF Railway frontend team. Built UI components, fixed bugs, delivered demos, and maintained 80%+ test coverage using Jest and RTL to ensure code quality and reliability.",
-      tech: ["React", "SASS", "NPM", "Redux"],
-      image: "/projects/npm-package.png",
-      duration: "",
-      github: "",
-      live: "",
-    },
-    {
-      title: "Toyota GTS Web App",
-      description:
-      "Worked on Toyota North America’s forklift telematics platform at Infosys. Built real-time data visualizations by consuming API data from SAP and multi-database architecture (Historical, Cosmos, App DB). Designed and developed complex dashboards using React and Power BI, including line, bar, donut, and mixed charts. Led the frontend team, drove best practices, conducted KT sessions, and provided continuous technical guidance to ensure smooth delivery.",
-      tech: ["React", "Redux", "Kendo UI", "SASS"],
-      image: "/projects/toyota-gts.png",
-      duration: "",
-      github: "",
-      live: "",
-    },
-    {
-      title: "Senvion India Pvt. Ltd. (Analytics)",
-      description:
-        "Developed analytics dashboards for wind turbine performance visualization using React, React Native, and Highcharts.",
-      tech: ["React", "React Native", "Redux Persist", "Highcharts"],
-      image: "/projects/senvion.png",
-      duration: "",
-      github: "",
-      live: "",
-    },
-    {
-      title: "Aditya Birla – Travel & Locator Mobile App",
-      description:
-        "Cross-platform travel and employee locator app with secure encryption, real-time geolocation, Google Maps, weather integration, and push notifications. Built end-to-end using Angular 2, Ionic, and Cordova.",
-      tech: ["Angular 2", "Ionic 2", "Cordova", "HTML5", "CSS", "CryptoJS", "AWS Notifications"],
-      image: "/projects/aditya-birla.png",
-      duration: "",
-    },
-    {
-      title: "LimeRoad – E-commerce for Jio Feature Phones",
-      description:
-        "Developed a lightweight e-commerce application optimized for Jio feature phones. Responsible for requirements, planning, UI development, and full SDLC execution.",
-      tech: ["ReactJS", "Redux", "HTML", "CSS"],
-      image: "/projects/limeroad.png",
-      duration: "",
-    },
-    {
-      title: "Zopper – E-commerce for Samsung Tizen",
-      description:
-        "Built an e-commerce mobile application for Samsung Tizen devices using AngularJS and Ionic. Delivered UI components, performance improvements, documentation, and deployment to the Tizen App Store.",
-      tech: ["AngularJS", "Ionic", "Cordova", "HTML", "CSS", "jQuery"],
-      image: "/projects/zopper.png",
-      duration: "",
-    },
-    {
-      title: "NASSCOM (nipp.tech) – Web Application",
-      description:
-        "Designed and developed the responsive frontend for NASSCOM’s innovation platform. Improved usability, ensured cross-device responsiveness, and coordinated with backend and UX teams for a seamless experience.",
-      tech: ["JavaScript", "HTML", "CSS"],
-      image: "/projects/nasscom.png",
-      duration: "",
-    }
-  ];
-
-  return (
-    <section className="py-16">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-        Projects
-      </h1>
-      <p className="text-gray-700 dark:text-gray-300 mb-10 max-w-3xl">
-        Below are key projects I’ve built or contributed to over the past 9 years,
-        demonstrating my experience with modern frontend frameworks, enterprise apps,
-        and reusable UI component design.
-      </p>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
-      </div>
-    </section>
-  );
-}
+import PageWrapper from "@/components/MotionWrapper";
+const projects = [
+{title:"BNSF North America application ecosystem",company:"Tech Mahindra",description:"Developed React UI components and reusable NPM packages for the BNSF application ecosystem. Also supported engineering colleagues with React, Redux and SASS/SCSS guidance and took part in client story demonstrations.",stack:"React.js · Redux · SASS/SCSS · NPM"},
+{title:"Material Handling Unit web application",company:"Infosys",description:"Developed frontend components for a web application supporting a Material Handling Unit. Collaborated with Product Owners and development teams, supported application transition and knowledge transfer, and contributed to planning and estimation.",stack:"React.js · Redux · Kendo UI · SASS/SCSS"},
+{title:"Wind analytics & mobile applications",company:"Senvion India",description:"Developed and maintained React.js and React Native applications and reusable UI components. Optimized the existing application to reduce frame drops and implemented offline mobile functionality using Redux Persist.",stack:"React.js · React Native · Redux Persist · SASS/SCSS"},
+{title:"Aditya Birla – Travel & Locator",company:"Divum Corporate Services",description:"Contributed to a travel and employee locator application with HTML5 geolocation, weather reporting, Google Maps, push notifications and CryptoJS-based encryption. Developed and deployed the iOS application and supported its Google Play Store release.",stack:"Angular 2 · Ionic 2 · Cordova · HTML5 · CryptoJS"},
+{title:"LimeRoad – Jio feature phone e-commerce",company:"Divum Corporate Services",description:"Developed application features for a Jio feature phone using React.js, Redux, HTML and CSS. Work included requirements clarification, project planning, effort estimation and SDLC practices.",stack:"React.js · Redux · HTML · CSS"},
+{title:"Zopper – Samsung Tizen e-commerce",company:"Divum Corporate Services",description:"Developed a Samsung Tizen application using AngularJS, Ionic, Cordova, PhoneGap, HTML, CSS and jQuery, with delivery to the Tizen App Store.",stack:"AngularJS · Ionic · Cordova · PhoneGap · jQuery"},
+{title:"NASSCOM – nipp.tech",company:"Divum Corporate Services",description:"Led frontend design for a responsive web application across desktop, tablet and mobile, collaborating with backend developers, UX designers and project managers and incorporating user feedback.",stack:"JavaScript · HTML5 · CSS"}
+];
+export default function Projects(){return <PageWrapper><section className="section section-muted"><div className="editorial-wrap"><div className="eyebrow">Selected professional work</div><h1 className="section-heading">A range of products.<br/>One consistent focus.</h1><p className="section-intro">Selected projects and contributions described from my professional experience. Client and product details are limited to what is included in my résumé.</p><div className="work-list">{projects.map((p,i)=><article className="work-row" key={p.title}><div className="work-number">0{i+1}</div><div><h3>{p.title}</h3><div className="text-xs uppercase tracking-[.12em] text-stone-500">{p.company}</div><div className="tag-list"><span className="tag">{p.stack}</span></div></div><p>{p.description}</p></article>)}</div></div></section></PageWrapper>;}
