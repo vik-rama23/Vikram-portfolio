@@ -1,82 +1,22 @@
-import PageWrapper from "@/components/MotionWrapper";
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin } from "lucide-react";
-
-export const metadata = {
-  title: "Vikram Kumar — Frontend Developer",
-  description:
-    "I build modern, high-performance web experiences with React, Next.js and TypeScript. Portfolio of Vikram Kumar.",
-  openGraph: {
-    title: "Vikram Kumar — Frontend Developer",
-    description:
-      "I build modern, high-performance web experiences with React, Next.js and TypeScript.",
-    images: ["/opengraph-image.svg"],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vikram Kumar — Frontend Developer",
-    description:
-      "I build modern, high-performance web experiences with React, Next.js and TypeScript.",
-    images: ["/opengraph-image.svg"],
-  },
-};
-
+const strengths = [
+{n:"01",title:"Frontend engineering",text:"Building responsive, maintainable web experiences with React, TypeScript, Redux and reusable UI systems."},
+{n:"02",title:"Technical leadership",text:"Setting frontend direction, coordinating delivery, reviewing code and helping engineers grow through mentoring."},
+{n:"03",title:"Data-rich interfaces",text:"Turning complex information into clear dashboards and interactive visualizations with Highcharts and Kendo UI."}
+];
+const work = [
+{title:"Enterprise strategy & analytics",context:"LTIMindtree",detail:"Frontend delivery and technical leadership for complex enterprise experiences, including data-rich widgets and visualizations.",tags:"React · Redux · Highcharts · AG-Grid"},
+{title:"BNSF frontend packages",context:"Tech Mahindra",detail:"Developed React UI components and reusable NPM packages for the BNSF North America application ecosystem.",tags:"React · Redux · SASS/SCSS · NPM"},
+{title:"Material handling web application",context:"Infosys",detail:"Built frontend components, collaborated with product and engineering teams, and supported planning, estimation and client demonstrations.",tags:"React · Redux · Kendo UI"},
+{title:"Wind analytics & mobile experience",context:"Senvion",detail:"Developed and maintained web and mobile applications, optimized the experience and implemented offline mobile functionality.",tags:"React · React Native · Redux Persist"}
+];
 export default function Home() {
-  return (
-    <PageWrapper>
-      <section className="hero-bg rounded-2xl p-8 md:p-12 relative overflow-hidden">
-        <div className="absolute -right-32 -top-20 w-72 h-72 rounded-full bg-gradient-to-br from-blue-100/30 to-transparent opacity-60 animate-pulse blur-3xl"></div>
-
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-2/3">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 dark:text-gray-50">
-              I build modern, high-performance web experiences.
-            </h1>
-            <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg">
-              I’m Vikram Kumar — I’m a Frontend Engineer with over 9 years of experience building responsive and user-friendly web applications. I mainly work with React, Next.js, and TypeScript, and I enjoy creating clean, fast, and accessible interfaces. I’ve led UI work on several projects, improved design systems, and helped teams build scalable front-end solutions. I love turning complex problems into simple experiences and working closely with designers and backend teams to bring ideas to life. I’m always learning and keeping up with new frontend trends to improve the way I build products.</p>
-
-            <div className="mt-6 flex gap-4">
-              <Link href="/projects" className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
-                View Work
-              </Link>
-
-              <a href="/Vikramkumar-resume.pdf" download className="inline-flex items-center gap-2 border border-gray-300 dark:border-gray-700 px-5 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition">
-                Download Resume
-              </a>
-            </div>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href="https://www.linkedin.com/in/vikramkumarverma/"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 transition"
-              >
-                <Linkedin size={18} /> LinkedIn
-              </a>
-
-              <a
-                href="https://github.com/vik-rama23"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white transition"
-              >
-                <Github size={18} /> GitHub
-              </a>
-            </div>
-
-          </div>
-
-          <div className="md:w-1/3 flex justify-center">
-            {/* Use public/profile.jpg — fallback to placeholder if not present */}
-            <div className="w-40 h-40 rounded-full overflow-hidden shadow-lg">
-              <Image src="/profile.jpg" alt="Vikram Kumar" width={160} height={160} className="object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </PageWrapper>
-  );
+return <>
+<section className="hero-section"><div className="editorial-wrap hero-grid"><div><div className="eyebrow">Specialist · Software Engineering · Pune, India</div><h1 className="display-title hero-title">Engineering<br/><em>thoughtful</em><br/>digital experiences.</h1><p className="hero-copy">I'm Vikram Kumar — a frontend engineering specialist with 10+ years of experience building responsive web and mobile applications. I bring together hands-on engineering, data visualization and team leadership to turn complex requirements into clear, dependable experiences.</p><div className="hero-meta"><span>10+ years experience</span><span>Web & mobile</span><span>Frontend leadership</span></div><div className="hero-actions"><Link href="/experience" className="button-primary">Explore my experience ↗</Link><a href="/Vikramkumar-resume.pdf" target="_blank" rel="noreferrer" className="button-outline">View résumé ↗</a></div></div><div className="portrait-frame"><Image src="/profile.jpg" alt="Portrait of Vikram Kumar" width={720} height={900} priority/><div className="portrait-caption">Vikram Kumar · Software Engineering</div></div></div></section>
+<section className="section section-light"><div className="editorial-wrap"><div className="eyebrow">A little about my work</div><h2 className="section-heading">Engineering with clarity.<br/>Leading with intent.</h2><p className="section-intro">My work spans enterprise and consumer-facing products — from reusable component systems and mobile applications to complex analytical dashboards. I enjoy solving frontend challenges while helping teams deliver with confidence.</p><div className="stats-grid"><div className="stat"><div className="stat-number">10+</div><div className="stat-label">Years in software</div></div><div className="stat"><div className="stat-number">05</div><div className="stat-label">Organizations</div></div><div className="stat"><div className="stat-number">Web</div><div className="stat-label">And mobile products</div></div><div className="stat"><div className="stat-number">Lead</div><div className="stat-label">Frontend delivery</div></div></div></div></section>
+<section className="section section-dark"><div className="editorial-wrap"><div className="eyebrow">What I bring</div><h2 className="section-heading">A balance of craft,<br/>systems and people.</h2><div className="feature-grid">{strengths.map(s=><article className="feature-card" key={s.n}><div className="feature-index">{s.n} / 03</div><h3>{s.title}</h3><p>{s.text}</p></article>)}</div></div></section>
+<section className="section section-muted"><div className="editorial-wrap"><div className="eyebrow">Selected contributions</div><h2 className="section-heading">Work shaped by real<br/>product challenges.</h2><p className="section-intro">A selection of professional work and contributions across enterprise software, analytics and consumer applications.</p><div className="work-list">{work.map((w,i)=><article className="work-row" key={w.title}><div className="work-number">0{i+1}</div><div><h3>{w.title}</h3><div className="text-xs uppercase tracking-[.12em] text-stone-500">{w.context}</div><div className="tag-list"><span className="tag">{w.tags}</span></div></div><p>{w.detail}</p></article>)}</div><div className="mt-8"><Link href="/projects" className="text-xs uppercase tracking-[.12em] border-b border-stone-500 pb-2">Explore all selected work ↗</Link></div></div></section>
+<section className="section section-dark"><div className="editorial-wrap contact-band"><div><div className="eyebrow">Have a good challenge in mind?</div><h2 className="section-heading mb-0">Let's make it<br/><em className="text-[#c5a47e]">meaningful.</em></h2></div><div><p className="section-intro mb-7">I'm always interested in thoughtful conversations about frontend engineering, technical leadership and building better digital products.</p><Link href="/contact" className="button-primary">Get in touch ↗</Link></div></div></section>
+</>;
 }
