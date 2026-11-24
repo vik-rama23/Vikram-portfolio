@@ -17,6 +17,48 @@ const experience = [
   { period: "Sep 2016 — May 2018", role: "Application Developer", company: "Divum Corporate Services", details: "Started my software development career building web application features and strengthening core frontend engineering skills." },
 ];
 
+
+const projectGroups = [
+  {
+    company: "LTM",
+    period: "October 2021 — Present",
+    projects: [
+      { name: "EY – Competitive Edge", domain: "Strategic Intelligence & M&A Analytics", description: "Contributing to enterprise strategic intelligence and M&A analytics experiences, building data-rich frontend workflows and interactive visualizations.", role: "Frontend engineering, reusable UI development and technical direction", stack: "React · TypeScript · Redux · Highcharts" },
+    ],
+  },
+  {
+    company: "Tech Mahindra",
+    period: "May 2021 — October 2021",
+    projects: [
+      { name: "BNSF Railway", domain: "Enterprise Railway Application Ecosystem", description: "Developed frontend features for the BNSF application ecosystem, including reusable React UI components and shared NPM packages.", role: "Frontend development, reusable component engineering and team guidance", stack: "React · Redux · JavaScript · SASS/SCSS · NPM" },
+    ],
+  },
+  {
+    company: "Infosys",
+    period: "December 2018 — April 2021",
+    projects: [
+      { name: "Toyota North America", domain: "Forklift & Material Handling Telematics", description: "Built frontend components for a material-handling application, supporting data-driven telematics experiences and enterprise workflows.", role: "Frontend development, application setup and knowledge transfer", stack: "React · Redux · Kendo UI · SASS/SCSS" },
+    ],
+  },
+  {
+    company: "Senvion India",
+    period: "June 2018 — December 2018",
+    projects: [
+      { name: "Renewable Energy Analytics", domain: "Web & Mobile Applications", description: "Developed and maintained web and mobile application experiences, implemented offline functionality and optimized the existing app to reduce frame drops.", role: "Frontend and mobile application development", stack: "React · React Native · Redux · Redux Persist · SASS/SCSS" },
+    ],
+  },
+  {
+    company: "Divum Corporate Services",
+    period: "September 2016 — May 2018",
+    projects: [
+      { name: "ABG – Travel & Locator", domain: "Android & iOS Travel Application", description: "Implemented travel and location features including HTML5 geolocation, weather reporting, Google Maps, AWS-powered push notifications and CryptoJS encryption. Supported iOS deployment and Google Play Store release.", role: "Cross-platform application development", stack: "Angular 2 · Ionic 2 · Cordova · PhoneGap · HTML5 · JavaScript" },
+      { name: "Zopper – E-commerce", domain: "Samsung Tizen Application", description: "Developed e-commerce application features for Samsung Tizen devices and supported delivery to the Tizen App Store.", role: "Frontend and hybrid application development", stack: "AngularJS · Ionic · Cordova · PhoneGap · HTML · CSS · jQuery" },
+      { name: "LimeRoad – E-commerce", domain: "Jio Feature Phone Application", description: "Developed e-commerce features for Jio feature phones using React and Redux.", role: "Frontend application development", stack: "React · Redux · JavaScript · HTML · CSS" },
+      { name: "NASSCOM – nipp.tech", domain: "Responsive Web Application", description: "Led frontend design and development for responsive desktop, tablet and mobile experiences, collaborating with backend, UX and product teams.", role: "Frontend design and development", stack: "Angular · JavaScript · HTML5 · CSS" },
+    ],
+  },
+];
+
 const education = [
   { period: "2016", qualification: "PG-Diploma, Embedded System Design", institute: "CDAC, Bangalore" },
   { period: "2011 — 2014", qualification: "B.E., Electronics & Communication", institute: "J.N. College of Technology, RGPV" },
@@ -75,6 +117,38 @@ export default function Home() {
               </div>
               <a className="btn btn-primary" href="/Vikramkumar-resume.pdf" target="_blank" rel="noreferrer">View résumé ↗</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="projects" className="section projects-section">
+        <div className="container">
+          <div className="section-heading centered">
+            <p className="eyebrow">Selected work</p>
+            <h2>Projects &amp; <span>Contributions</span></h2>
+            <p>A career-spanning selection of products and platforms, presented in the order of my professional journey.</p>
+          </div>
+          <div className="project-company-list">
+            {projectGroups.map((group, groupIndex) => (
+              <section className="project-company" key={group.company}>
+                <div className="project-company-heading">
+                  <div><span className="project-index">{String(groupIndex + 1).padStart(2, "0")}</span><h3>{group.company}</h3></div>
+                  <span className="project-period">{group.period}</span>
+                </div>
+                <div className="project-grid">
+                  {group.projects.map((project) => (
+                    <article className="project-card" key={project.name}>
+                      <p className="project-domain">{project.domain}</p>
+                      <h4>{project.name}</h4>
+                      <p className="project-description">{project.description}</p>
+                      <div className="project-role"><strong>Contribution</strong><span>{project.role}</span></div>
+                      <div className="project-stack"><strong>Technology</strong><span>{project.stack}</span></div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ))}
           </div>
         </div>
       </section>
