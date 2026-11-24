@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: { default: "Vikram Kumar | Specialist - Software Engineering", template: "%s | Vikram Kumar" },
   description: "Vikram Kumar is a Specialist - Software Engineering with 10+ years of experience in frontend engineering, React, TypeScript, React Native and data visualization.",
   keywords: ["Vikram Kumar", "Frontend Engineering", "React", "TypeScript", "React Native", "Frontend Lead", "Highcharts"],
+  icons: { icon: [{ url: "/vk-favicon.svg", type: "image/svg+xml" }], shortcut: "/vk-favicon.svg" },
   openGraph: { title: "Vikram Kumar | Specialist - Software Engineering", description: "10+ years building responsive web and mobile applications, leading frontend delivery and engineering data-rich experiences.", url: siteUrl, siteName: "Vikram Kumar", images: ["/opengraph-image.svg"], type: "website" },
   twitter: { card: "summary_large_image", title: "Vikram Kumar | Specialist - Software Engineering", description: "Frontend engineering, technical leadership and data visualization.", images: ["/opengraph-image.svg"] },
   alternates: { canonical: siteUrl },
